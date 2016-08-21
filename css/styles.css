@@ -1,88 +1,212 @@
 body {
-	font-size: 16px;
-	color: #fff;
-	background-color: #61122f;
-	font-family: 'Oxygen', sans-serif;	
+  font-size: 16px;
+  color: #fff;
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;  
 }
 
+/*** HEADER  ***/
 #header-nav {
-	background-color: #f6b319;
-	border-radius: 0;
-	border: 0;
-	border-style: solid;
+  background-color: #f6b319;
+  border-radius: 0;
+  border: 0;
+  border-style: solid;
 }
 
 #logo-img {
-	background: url('../images/restaurant-logo_large.png') no-repeat;
-	width: 150px;
-	height: 150px;
-	margin: 10px 15px 10px 0;
+  background: url('../images/restaurant-logo_large.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
 
 }
 
 .navbar-brand { /*restaurant title*/
-	padding-top: 25px;
+  padding-top: 25px;
 }
 
 .navbar-brand a:hover, .navbar-brand a:focus { /*restaurant name hover behavior */
-	text-decoration: none;
-	background: #E7E7E7;
+  text-decoration: none;
+  background: #E7E7E7;
 }
 
 .navbar-brand h1 { /*Restaurant name*/
-	font-family: 'Lora', serif;
-	color: #556c3e;
-	font-size: 1.5em;
-	text-transform: uppercase;
-	font-weight: bold;
-	text-shadow: 2px 2px 4px #222;
-	margin-top: 0;
-	margin-bottom: 0;
-	line-height: .75;
+  font-family: 'Lora', serif;
+  color: #556c3e;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
 }
 
 .navbar-brand p { /*kosher text*/
-	color: #000;
-	text-transform: uppercase;
-	font-size: .7em;
-	margin-top: 15px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
 }
 .navbar-brand p span { /*kosher symbol star-k */
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 #nav-list {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 #nav-list a {
-	color: #951C49;
-	text-align: center
+  color: #951C49;
+  text-align: center
 }
 
 #nav-list a:hover {
-	background: #E7E7E7;
+  background: #E7E7E7;
 }
 
 #nav-list a span {
-	font-size: 1.8em;
+  font-size: 1.8em;
 }
 
 #phone {
-	margin-top: 5px;
+  margin-top: 5px;
 }
 
 #phone a {
-	text-align: right;
-	padding-bottom: 0px;
-	vertical-align: text-bottom;
+  text-align: right;
+  padding-bottom: 0px;
+  vertical-align: text-bottom;
 }
 
 #phone div {
-	color: #557c3e;
-	text-align: right;
-	padding-right: 15px;
+  color: #557c3e;
+  text-align: right;
+  padding-right: 15px;
 }
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -58px
+}
+
+                      /*END HEADER*/
+
+/*JUMBOTRON*/
+.container .jumobtron {
+    box-shadow: 0 0 50px #3F0C1F;
+    border: 2px solid #3F0C1F;
+}
+
+/* LARGE DEVICES ONLY*/
+@media (min-width: 1200px) {
+  .jumbotron {
+    background: url('../images/jumbotron_1200.jpg') no-repeat;
+    height:675px;
+  }
+}
+
+/*MEDIUM DEVICES ONLY*/
+@media (min-width: 992px) and (max-width: 1199px){
+  /*HEADER*/
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+  /*END HEADER*/
+
+  .jumbotron {
+    background: url(../images/jumbotron_992.jpg) no-repeat;
+    height: 558px;
+  }
+}
+
+/*SMALL DEVICES ONLY*/
+@media (min-width: 768px) and (max-width: 991px){
+  /*HEADER*/
+  .navbar-brand h1 { /*Restaurant name*/
+    font-size: 5vw;
+    line-height: .45;
+  }
+
+  #nav-list { /*icons and phone number*/
+    font-size: .85em;
+  }
+  /*END HEADER*/
+
+.jumbotron {
+    background: url(../images/jumbotron_768.jpg) no-repeat;
+    height: 432px;
+  }
+
+}
+
+/*EXTRA SMALL DEVICES*/
+@media (max-width: 767px){
+  /*HEADER*/
+  .navbar-brand { /*All nav bar stuff*/
+    padding-top: 10px;
+    height: 90px;
+  }
+  .navbar-brand h1 { /*Restaurant name*/
+    padding-top: 10px;
+    font-size: 5vw; /*1vw = 1% viewport width*/
+  }
+  .navbar-brand p { /*Kosher Cert*/
+    font-size: .6em; 
+    margin-top: 12px;
+  }
+  .navbar-brand p img { /*Star of Kosher*/
+    height: 20px;
+  }
+  
+  /*Collapsable Nav item styling*/
+  #collapsable-nav a {
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span {
+    font-size: 1em;
+    margin-right: 10px
+  }
+  /*END HEADER*/
+
+  /*EXTRA SMALL DEVICE CALL BUTTON*/
+   #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+    }
+    #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    align-content: center;
+    }
+/*JUMBOTRON*/
+    .container .jumbotron {
+    margin-top: 30px;
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
 
 
 

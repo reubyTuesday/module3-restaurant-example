@@ -97,10 +97,46 @@ body {
 
                       /*END HEADER*/
 
-/*JUMBOTRON*/
+/*HOME PAGE*/
 .container .jumobtron {
     box-shadow: 0 0 50px #3F0C1F;
     border: 2px solid #3F0C1F;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+  background: url('../images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+#specials-tile {
+  background: url('../images/specials-tile.jpg') no-repeat;
+  background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .7;
+
 }
 
 /* LARGE DEVICES ONLY*/
@@ -113,14 +149,14 @@ body {
 
 /*MEDIUM DEVICES ONLY*/
 @media (min-width: 992px) and (max-width: 1199px){
-  /*HEADER*/
+  /*Medium Device HEADER*/
   #logo-img {
     background: url('../images/restaurant-logo_medium.png') no-repeat;
     width: 100px;
     height: 100px;
     margin: 5px 5px 5px 0;
   }
-  /*END HEADER*/
+  /*Medium Device END HEADER*/
 
   .jumbotron {
     background: url(../images/jumbotron_992.jpg) no-repeat;
@@ -130,7 +166,7 @@ body {
 
 /*SMALL DEVICES ONLY*/
 @media (min-width: 768px) and (max-width: 991px){
-  /*HEADER*/
+  /*Small Device HEADER*/
   .navbar-brand h1 { /*Restaurant name*/
     font-size: 5vw;
     line-height: .45;
@@ -139,7 +175,7 @@ body {
   #nav-list { /*icons and phone number*/
     font-size: .85em;
   }
-  /*END HEADER*/
+  /*Small Device END HEADER*/
 
 .jumbotron {
     background: url(../images/jumbotron_768.jpg) no-repeat;
@@ -150,7 +186,7 @@ body {
 
 /*EXTRA SMALL DEVICES*/
 @media (max-width: 767px){
-  /*HEADER*/
+  /*XS Device HEADER*/
   .navbar-brand { /*All nav bar stuff*/
     padding-top: 10px;
     height: 90px;
@@ -175,7 +211,7 @@ body {
     font-size: 1em;
     margin-right: 10px
   }
-  /*END HEADER*/
+  /*XS Device END HEADER*/
 
   /*EXTRA SMALL DEVICE CALL BUTTON*/
    #call-btn > a {
@@ -198,9 +234,28 @@ body {
     .container .jumbotron {
     margin-top: 30px;
     padding: 0;
+}
+  #menu-tile, #specials-tile  {
+    width: 360px;
+    margin: 0 auto 15px;
+  }
+}  
+
+/*SUPER EXTRA SMALL DEVICES*/
+@media (max-width: 479px){
+  #menu-tile, #specials-tile  {
+    width: 280px;
+    margin: 0 auto 15px;
+  }
+  .navbar-brand h1 { /*Restaurant name*/
+    padding-top: 5px;
+    font-size: 6vw; /*1vw = 1% viewport width*/
+  }
+  .navbar-header button.navbar-toggle {
+    clear: both;
+    margin-top: -45px
   }
 }
-
 
 
 

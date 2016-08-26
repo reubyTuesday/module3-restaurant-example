@@ -127,7 +127,11 @@ body {
 #testimonials p:nth-child(2){
   margin-top: 25px;
 }
-
+/*.panel-footer p {
+  width: 300px;
+  margin: 0 auto;
+}   I want to be able to wet a width to the testimonials and delivery note and center it but it is not working*/
+/*END FOOTER*/
 }
 /*HOME PAGE*/
 .container .jumobtron {
@@ -310,9 +314,44 @@ body {
     clear: both;
     margin-top: -45px
   }
+  .col-xxs-12 {
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    float: left;
+  }
 }
 
+/*Menu Categories Page*/
+.category-tile { 
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+.category-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .7;
+}
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
 
+#menu-categories-title + div {
+  margin-bottom: 50px;
+}
+/* END MENU CATEGORIES PAGE */
 
 
 
